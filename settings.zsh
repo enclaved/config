@@ -28,8 +28,6 @@ alias updateplex='curl http://192.168.2.2:32400/library/sections/1/refresh\?forc
 
 zstyle ':completion:*' menu select
 
-
-
 HISTFILE=~/.history
 SAVEHIST=1000000
 HISTSIZE=1000000
@@ -88,3 +86,12 @@ function hidefiles() {
 	end tell
 EOF
 }
+function copyfile {
+  [[ "$#" != 1 ]] && return 1
+  local file_to_copy=$1
+  cat $file_to_copy | pbcopy
+}
+function copydir {
+  pwd | tr -d "\r\n" | pbcopy
+}
+
