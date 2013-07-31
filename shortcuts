@@ -1,0 +1,21 @@
+SHORTCUTS AND ALIASES
+** zsh
+speedtest
+serveThis
+cdd="cd ~/Downloads" || "cd ~/downloads"
+cdp='cd ~/Projects'
+st
+rd='rm -rf'
+md='mkdir -p'
+hlast='fc -l 1'
+hgrep='history | grep'
+showfiles
+hidefiles
+tab
+
+** sublime text 2
+ctrl + tab - change file tabs
+ctrl + space - switch suggestions
+
+** tmux
+

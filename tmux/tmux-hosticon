@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# gives macs an apple and my linux servers a little cloud
+
+if [[ $OSTYPE =~ darwin* ]]; then
+  # OS X
+  echo ''
+elif [[ $OSTYPE =~ linux* ]]; then
+  # Linux
+  echo '☁'
+fi
