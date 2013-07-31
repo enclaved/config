@@ -24,7 +24,7 @@ else
 fi
 
 PROMPT='%{$fg[green]%}$THEME_PREFIX%{$reset_color%} %{$orange%}%m %{$reset_color%}%{$fg[green]%}%~ %{$reset_color%}%{$(git_prompt_info)%}%{$fg[green]%}
-%(!.#.$)%{$reset_color%} '
+%(#.#.$)%{$reset_color%} '
 
 RPROMPT='%{$fg[green]%}[%{$reset_color%}%{$orange%}%*%{$reset_color%}%{$fg[green]%}]%{$reset_color%}'
 
