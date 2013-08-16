@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import psutil
-import sys
 
 def info():
     mem = psutil.virtual_memory()
