@@ -12,8 +12,8 @@ install:
 	cp tmux.conf $(prefix)/.tmux.conf
 	cp tmux.reset.conf $(prefix)/.tmux.reset.conf
 
-	install -m 0744 tmux/tmux-cpu ${prefix}/.tmux/
-	install -m 0744 tmux/tmux-mem ${prefix}/.tmux/
+	install -m 0744 tmux/tmux-cpu.py ${prefix}/.tmux/
+	install -m 0744 tmux/tmux-mem.py ${prefix}/.tmux/
 	install -m 0744 tmux/tmux-weather ${prefix}/.tmux/
 	install -m 0744 tmux/tmux-hosticon ${prefix}/.tmux/
 	touch ${prefix}/.tmux/tmp
