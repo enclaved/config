@@ -17,6 +17,7 @@ then
     export PATH=/usr/local/go/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$HOME/bin:/usr/local:/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/var/lib/gems/1.8/gems
 fi
 
+alias diskspeedtest='dd if=/dev/zero of=test bs=64k count=16k conv=fdatasync'
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
 alias speedtest500='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 alias serveThis='python -m SimpleHTTPServer'

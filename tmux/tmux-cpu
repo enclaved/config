@@ -1,38 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-# innacurate at anything but 10 wide weird math errors in bash that i couldn't figure out
-# lack of floats not helpful. needs to be redone in different language to be more useful
+import psutil
 
-width=10
-x=$((100/$width))
-interval=1
+def make_dashes(perc):
+    dashes = "⋮" * int((float(perc) / 10))
+    empty_space = " " * (10 - len(dashes))
+    return dashes, empty_space
 
-create_lines() {
+def get_cpu():
+    usedcpu = psutil.cpu_percent(interval=0.1)
+    
+    dashes, empty_space = make_dashes(usedcpu)
+    line = "[%s%s] %s%%" % (
+        dashes, empty_space,
+        usedcpu,
+    )
 
-  cpu_lines=$(round $cpu_info/$x 0)
+    return line
 
-  lines=""
+def main():
+    try:
+        print get_cpu()
+    except (KeyboardInterrupt, SystemExit):
+        pass
 
-  for (( i = 0; i < $width; i++ )); do
-    if [[ "$i" < "$cpu_lines" ]]; then
-      lines="$lines|"
-    else
-      lines="$lines "
-    fi
-  done
-} 
-
-round() { 
-echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc)) 
-};
-
-if [[ $OSTYPE =~ darwin* ]]; then
-  cpu_info=$(iostat -n0 -c2 | tail -n1 | awk '{print $1 + $2}')
-  # load=$(iostat -n0 -c1 | tail -n1 | cut -d' ' -f8,9,10)
-elif [[ $OSTYPE =~ linux* ]]; then
-  cpu_info=($(vmstat 1 ${interval} | tail -n1 | awk '{print $13 " " $14}'))
-  # load=$(awk '{print $1,$2,$3}' /proc/loadavg)
-fi
-
-create_lines
-echo "[${lines}] ${cpu_info}%"
+if __name__ == '__main__':
+    main()
