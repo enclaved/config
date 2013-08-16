@@ -14,9 +14,9 @@ if [[ $OSTYPE =~ darwin* ]]; then
 
 elif [[ $OSTYPE =~ linux* ]]; then
   # Linux
-  mem_info=($(free -m))
+  mem_info=($(free -t -m))
   TOTAL_MEM=${mem_info[7]}
-  USED_MEM=${mem_info[15]}
+  USED_MEM=${mem_info[8]}
 fi
 
 echo "${USED_MEM}/${TOTAL_MEM}MB"
