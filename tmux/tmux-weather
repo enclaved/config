@@ -7,15 +7,11 @@ tmp_file="$HOME/.tmux/tmp"
 update_period="600"
 degree_symbol="°"
 
-
-
 if [ -e $weather_file ]; then
 		exit 0
 fi
 
-
 __get_condition_symbol() {
-
 	if [[ $OSTYPE =~ darwin* ]]; then
 		# OS X
 		local gnugrep="ggrep"
@@ -104,7 +100,6 @@ if [ -f $tmp_file ]; then
 	if [ "$up_to_date" -eq 1 ]; then
 		__read_TMP_FILE
 	else
-
 		degree=""
 
 		if [ -z "$degree" ]; then
@@ -137,14 +132,10 @@ if [ -f $tmp_file ]; then
 				degree_symbol="°F"
 			esac
 
-			
 			condition_symbol=$(__get_condition_symbol "$condition" "$sunrise" "$sunset") 
 			echo "${condition_symbol}${degree}${degree_symbol}"
 			echo "${condition_symbol}${degree}${degree_symbol}" > $tmp_file
 		fi
-	
 	fi
 fi
-
-
 # Get symbol for condition. Available conditions: http://developer.yahoo.com/weather/#codes

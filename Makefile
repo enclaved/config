@@ -1,7 +1,6 @@
 prefix=${HOME}
 # THIS WILL OVERWRITE ALL THE CONFIG FILES
 install:
-	
 	test -d $(prefix)/.tmux/ || mkdir $(prefix)/.tmux/
 	test -d $(prefix/.irssi/ || mkdir $(prefix)/.irssi/
 	test -d $(prefix/.oh-my-zsh/ || mkdir $(prefix)/.oh-my-zsh
@@ -17,4 +16,4 @@ install:
 	install -m 0744 tmux/tmux-mem ${prefix}/.tmux/
 	install -m 0744 tmux/tmux-weather ${prefix}/.tmux/
 	install -m 0744 tmux/tmux-hosticon ${prefix}/.tmux/
-	touch ${prefix}/.tmux/tmp 
+	touch ${prefix}/.tmux/tmp
