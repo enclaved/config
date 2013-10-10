@@ -10,9 +10,9 @@ then
 
     export PATH=/usr/local/Cellar/ruby/1.9.3-p194/bin:$HOME/bin:/usr/local:/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/bin/gsd:/usr/local/sbin;
 elif [[ `uname` == 'Darwin' ]]
-then 
+then
     alias cdd="cd ~/Downloads"
-    alias cdp='cd ~/Projects'
+    alias cdp='cd ~/Dropbox/Projects'
 
     export PATH=/usr/local/go/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$HOME/bin:/usr/local:/bin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/var/lib/gems/1.8/gems
 fi
@@ -28,8 +28,9 @@ alias hgrep='history | grep'
 alias updateplex='curl http://192.168.2.2:32400/library/sections/1/refresh\?force\=1;curl http://192.168.2.2:32400/library/sections/2/refresh\?force\=1'
 alias unhidelib=/usr/bin/chflags nohidden ~/Library
 zstyle ':completion:*' menu select
+alias irc=tmux -a -d -t irc
 
-HISTFILE=~/.history
+ HISTFILE=~/.history
 SAVEHIST=1000000
 HISTSIZE=1000000
 # Don't overwrite, append!
