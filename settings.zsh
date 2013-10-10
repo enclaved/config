@@ -28,9 +28,9 @@ alias hgrep='history | grep'
 alias updateplex='curl http://192.168.2.2:32400/library/sections/1/refresh\?force\=1;curl http://192.168.2.2:32400/library/sections/2/refresh\?force\=1'
 alias unhidelib=/usr/bin/chflags nohidden ~/Library
 zstyle ':completion:*' menu select
-alias irc=tmux -a -d -t irc
+alias irc='tmux -a -d -t irc'
 
- HISTFILE=~/.history
+HISTFILE=~/.history
 SAVEHIST=1000000
 HISTSIZE=1000000
 # Don't overwrite, append!
