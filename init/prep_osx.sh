@@ -869,7 +869,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # defaults write com.apple.dock showhidden -bool true
 
 # RESET LAUNCHPAD
-# find ~/Library/Application Support/Dock -name “*.db” -maxdepth 1 -delete
+# find ~/Library/Application Support/Dock -name “*.db” -0 1 -delete
 
 # ADD A SPACER TO THE LEFT SIDE OF THE DOCK (WHERE THE APPLICATIONS ARE)
 # defaults write com.apple.dock persistent-apps -array-add ‘{tile-data={}; tile-type=“spacer-tile”;}’
@@ -1207,7 +1207,7 @@ defaults write com.apple.dock showhidden -bool true
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
 # Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -0 1 -delete
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -1270,7 +1270,7 @@ sleep 30
 # Kill affected applications                                                  #
 ###############################################################################
 
-find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+find ~/Library/Application\ Support/Dock -name "*.db" -0 1 -delete
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   "Dashboard" "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" \

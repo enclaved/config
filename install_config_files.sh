@@ -5,8 +5,8 @@ if [[ $OSTYPE =~ darwin* ]]; then
 
   # Install Sublime Text settings
   cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-  cp -r init/Solarized\ \(dark\).sublime-theme ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Default.sublime-theme 2> /dev/null
-  cp -r init/Solarized\ \(dark\).tmTheme ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Solarized\ \(dark\).tmTheme 2> /dev/null
+  cp -r init/Solarized\ \(dark\).sublime-theme ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default.sublime-theme 2> /dev/null
+  cp -r init/Solarized\ \(dark\).tmTheme ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Solarized\ \(dark\).tmTheme 2> /dev/null
 
   # Install the Solarized Dark theme for iTerm
   open init/Solarized\ Dark.itermcolors
