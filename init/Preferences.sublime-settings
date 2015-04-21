@@ -46,9 +46,5 @@
    [
       ".git",
       "node_modules"
-   ],
-	 "rulers":
-   [
-      80
    ]
 }
