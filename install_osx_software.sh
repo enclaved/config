@@ -2,6 +2,9 @@
 # Install software
 ###############################################################################
 ## INSTALL HOMEBREW AND COMMANDLINE TOOLS MISSING IN OSX, ALONG WITH SOME PRETTINESS
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install wget gnu-sed psutils tmux git
@@ -55,10 +58,12 @@ brew cask install chromecast chrome-remote-desktop-host google-chrome
 brew cask install lastpass-universal silverlight flash-player
 
 ## Add applications to dock
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Transmit.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+# defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Transmit.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+# defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 
 # todo
 # setup desktop specific apps
 # additional webdev stuff nodejs, compass, scss etc
 # brew cask install firefox github pencil
+
+# list of stuff i did manually after this script
